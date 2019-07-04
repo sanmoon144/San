@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chapter 02 Practice</title>
+</head>
+<body>
+    <h1>The <span id="spanTotalLecturers">X</span>The Most Valuable Lecturer</h1>
+    <ol>
+        <li id="liLecturer1"></li>
+        <li id="liLecturer2"></li>
+        <li id="liLecturer3"></li>
+        <li id="liLecturer4"></li>
+        <li id="liLecturer5"></li>
+    </ol>
+    <div id="divMessage"></div>
+    <script>
+
+        var elLiLecturer1 =document.getElementById("liLecturer1"),
+            elLiLecturer2 =document.getElementById("liLecturer2"),
+            elLiLecturer3 =document.getElementById("liLecturer3"),
+            elLiLecturer4 =document.getElementById("liLecturer4"),
+            elLiLecturer5 =document.getElementById("liLecturer5");
+
+        var elDivMessage=document.getElementById("divMessage"),
+            elSpanTotalLecturers=document.getElementById("spanTotalLecturers");
+
+        var lecturerName=[
+            "Daw Maw",
+            "Daw Ei Phyo Thein",
+            "Daw Cho Latt Thin",
+            "Daw Si Si Sein",
+            "Daw Myint Myint San",
+        ],
+        lecturerAge=[45,31,35,40,42],
+        lecturerAgeTotal=lecturerAge[0]+lecturerAge[1]+
+                            lecturerAge[2]+lecturerAge[3]+lecturerAge[4];
+
+    console.log(lecturerName);
+    console.log(lecturerAge[0]);
+    console.log(lecturerAgeTotal);
+
+    elLiLecturer1.textContent=lecturerName[0]+"-$"+lecturerAge[0];
+    elLiLecturer2.textContent=lecturerName[1]+"-$"+lecturerAge[1];
+    elLiLecturer3.textContent=lecturerName[2]+"-$"+lecturerAge[2];
+    elLiLecturer4.textContent=lecturerName[3]+"-$"+lecturerAge[3];
+    elLiLecturer5.textContent=lecturerName[4]+"-$"+lecturerAge[4];
+
+    elDivMessage.textContent="The total value of these lecturers is $"+lecturerAgeTotal.toFixed(2)+" lecturerAvgValue "+lecturerAgeTotal/lecturerName.length;
+
+
+    elSpanTotalLecturers.textContent=lecturerName.length;
+    
+   </script>
+</body>
+<!--
+    Name:               Myint Myint San
+    Email:              sanmoon144@gmail.com
+    Project:            Chapter02
+    Description:        Look at JS instructions
+    Date:               June 24,2019
+-->
+</html>
+
